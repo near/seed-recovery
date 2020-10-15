@@ -1,0 +1,31 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+input, button {
+  display: block;
+  margin-top: 4px;
+  border: 2px solid #eee;
+  padding: 8px;
+  border-radius: 4px;
+  width: 800px;
+}
+
+button {
+  border: 2px solid #ddd;
+  background: white;
+  width: 300px;
+}
+
+button:hover {
+  background: #ddd;
+}
+
