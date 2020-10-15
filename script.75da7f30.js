@@ -69045,8 +69045,14 @@ var options = {
 function init() {
   qs('#button').onclick = function () {
     var val = qs('#phrase').value;
+    var phrase = val;
 
-    var _parseSeedPhrase = (0, _nearSeedPhrase.parseSeedPhrase)(val),
+    if (val.indexOf('recover-with-link')) {
+      phrase = decodeURI(val.split('recover-with-link')[1].split('/')[2]);
+      console.log(phrase);
+    }
+
+    var _parseSeedPhrase = (0, _nearSeedPhrase.parseSeedPhrase)(phrase),
         publicKey = _parseSeedPhrase.publicKey,
         secretKey = _parseSeedPhrase.secretKey;
 
@@ -69094,7 +69100,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37475" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40503" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
