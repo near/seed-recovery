@@ -15,10 +15,10 @@ const options = {
 function init() {
     qs('#button').onclick = () => {
         const val = qs('#phrase').value
+        console.log(val)
         let phrase = val
-        if (val.indexOf('recover-with-link')) {
+        if (val.indexOf('recover-with-link') > -1) {
             phrase = decodeURI(val.split('recover-with-link')[1].split('/')[2])
-            console.log(phrase)
         }
         const { publicKey, secretKey } = parseSeedPhrase(phrase)
         qs('#publicKey').value = publicKey
