@@ -1,8 +1,6 @@
 import 'regenerator-runtime'
 
-import * as nearAPI from 'near-api-js';
-
-import { parseSeedPhrase } from 'near-seed-phrase'
+import { generateSeedPhrase, parseSeedPhrase } from 'near-seed-phrase'
 
 const qs = (s) => document.querySelector(s)
 
@@ -32,6 +30,12 @@ function init() {
             qs('#secretKey').type = 'text'
             qs('#reveal').innerHTML = 'Hide Secret Key'
         }
+    }
+	qs('#random').onclick = () => {
+        const { seedPhrase, publicKey, secretKey } = generateSeedPhrase()
+        qs('#phrase').value = seedPhrase
+        qs('#publicKey').value = publicKey
+        qs('#secretKey').value = secretKey
     }
 }
 
