@@ -3,7 +3,7 @@
     "node": ">= 12"
   },
   "dependencies": {
-    "@ledgerhq/hw-transport-u2f": "^5.22.0",
+    "@ledgerhq/hw-transport-u2f": "^5.34.0",
     "bs58": "^4.0.1",
     "js-sha256": "^0.9.0",
     "near-api-js": "^0.31.0",
