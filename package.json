@@ -6,7 +6,7 @@
     "@ledgerhq/hw-transport-u2f": "^5.22.0",
     "bs58": "^4.0.1",
     "js-sha256": "^0.9.0",
-    "near-api-js": "^0.31.0",
+    "near-api-js": "^0.45.1",
     "near-ledger-js": "^0.1.2",
     "near-seed-phrase": "^0.1.0",
     "parcel-bundler": "^1.12.4",
